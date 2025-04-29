@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f0f0f0;
+    min-height: 100vh;
+}
+
+/* Chat container */
+#chat {
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #1e2a38;
+    border-radius: 10px;
+    padding: 1rem;
+    background: linear-gradient(145deg, #051f1f, #0e2e2d, #093532);
+    color: #ddecf9;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Message area */
+#messages {
+    background: linear-gradient(135deg, #02310a, #1e0227, #2e0323);
+    padding: 1rem;
+    border-radius: 10px;
+    height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #fff;
+}
+
+
+/* Chat bubbles */
+.message-bubble {
+    max-width: 75%;
+    padding: 0.75rem 1rem;
+    border-radius: 15px;
+    word-wrap: break-word;
+    line-height: 1.4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* User bubble */
+.user {
+    align-self: flex-end;
+    background-color: #003508;
+    color: #ffffff;
+    border-bottom-right-radius: 0;
+}
+
+/* Bot bubble */
+.bot {
+    align-self: flex-start;
+    background-color: #02a6ae;
+    color: #000000;
+    border-bottom-left-radius: 0;
+}
+
+/* Input and button */
+input, button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #34495e;
+    cursor: pointer;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+footer .card {
+    background: #111418;
+    color: #d3d3d3;
+    border: none;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+footer .card-header {
+    background-color: #20262e;
+    font-weight: bold;
+    color: #00cec9;
+}
+
+footer .btn-primary {
+    background-color: #6c5ce7;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+footer .btn-primary:hover {
+    background-color: #a29bfe;
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    #chat {
+        width: 100% !important;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+    }
+
+    .message-bubble {
+        max-width: 90%;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px 10px;
+        background-color: #111418;
+        color: #aaa;
+        font-size: 0.75rem;
+        text-align: center;
+        box-shadow: 0 -1px 5px rgba(0,0,0,0.2);
+    }
+
+    footer .card,
+    footer .card-body,
+    footer .card-header,
+    footer .btn {
+        display: none;
+    }
+
+    footer::after {
+        content: "© Sahil | 2025 | Chatbot";
+        display: block;
+    }
+}
+
